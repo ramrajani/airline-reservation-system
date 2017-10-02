@@ -4,7 +4,7 @@ class Flight_Booking_System
 {
 	public static Flight a1 =new Flight("Spicejet",1,"mumbai","Delhi","23.30","3.00");
 	public static Flight a2 =new Flight("KingFisher",2,"bangalore","Mumbai","21.30","1.00");
-    public static Flight a3 =new Flight("AirIndia",3,"chennai","Myanmar","10.30","15.00");
+    	public static Flight a3 =new Flight("AirIndia",3,"chennai","Myanmar","10.30","15.00");
 	public static Flight a4 =new Flight("GoAir",4,"los_angeles","Delhi","8.30","18.00");
 	public static Flight a5 =new Flight("Jet_Airways",5,"mumbai","ahmedabad","7.00","10.00");
 
@@ -28,7 +28,7 @@ class Flight_Booking_System
 
 class Flight
 {
-	    static String N;
+	    	static String N;
 		static int Flight_N;
 		static String sour;
 		static String Destin;
@@ -57,7 +57,7 @@ class passenger
 	static String nation;
 	passenger(Vector v)
 	{
-	    v1= new Vector(v);
+	    	v1= new Vector(v);
 		System.out.println("Enter Name");
 		name=sc.next();
 		System.out.println("Enter Age");
@@ -77,11 +77,11 @@ class passenger
 			System.out.println(e.nextElement()+"");
 		}
 		*/
-	
+		Flight f=new Flght();
 		for(int i=0;i<v1.size();i++)
 		{
-			System.out.println(""+passenger.object(v1(i)));
-			
+			f=(Flight)v1(i);
+			System.out.println(f.N+" "+f.Flight_N+" "+f.sour+" "+f.Destin+" "+f.Arrival+" "+f.Departure);			
 		}
 	}
 }
