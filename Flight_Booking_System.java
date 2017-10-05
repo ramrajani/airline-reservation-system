@@ -77,11 +77,17 @@ class passenger
 			System.out.println(e.nextElement()+"");
 		}
 		*/
-		Flight f=new Flght();
+	   Flight_Booking_System f=new Flight_Booking_System();
 		for(int i=0;i<v1.size();i++)
 		{
-			f=(Flight)v1(i);
-			System.out.println(f.N+" "+f.Flight_N+" "+f.sour+" "+f.Destin+" "+f.Arrival+" "+f.Departure);			
+			
+			System.out.println(f.v1(i));			
 		}
+		/*
+		Flight_Booking_System f1=new Flight_Booking_System();
+		Vector v2=new Vector(f1.v);
+		for(int i=0;i<v2.size();i++)
+		{
+		*/	
 	}
 }
