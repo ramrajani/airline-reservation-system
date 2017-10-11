@@ -2,7 +2,7 @@ import java.util.*;
 
 class Flight_Booking_System
 {         
-    public static int fno;
+    public static int fno=0;
     public static int no_f;
     public static Flight a1 =new Flight("SpiceJet",1,"Mumbai","Delhi","23.30","3.00",10);
     public static Flight a2 =new Flight("KingFisher",2,"Bangalore","Mumbai","21.30","1.00",10);
@@ -57,16 +57,29 @@ class Flight_Booking_System
                                     System.out.println("Enter Flight Number You Want To Book: ");
                                     fno=s1.nextInt();
                                     break;  
-                            case 2: no_f=p1.Bookticket();
+                            case 2: if(fno==0)
+                            	     System.out.println("Search flight first");   
+                            	    else 	
+                            	    no_f=p1.Bookticket();
                                     break;
-                            case 3: v5=p1.payment(no_f);
+                            case 3:if(fno==0)
+                            	     System.out.println("Search flight first");   
+                            	    else 
+                            	    { v5=p1.payment(no_f);
                                     if(v5==1)
                                     System.out.println("Payment Done By Online Service!!");
                                     System.out.println("Have A Safe Journey!!");
+                            	    }
                                     break;
-                            case 5: ticket tkt=new ticket(v);
+                            case 5: if(fno==0)
+                            	     System.out.println("Search flight first");   
+                            	    else 
+                            	    {	ticket tkt=new ticket(v);
                                     tkt.print();
+                            	    }
                                     break;
+                            case 4:   p1.Cancelticket();   
+                            	      break;
                         }
                    }    
             }       
@@ -190,6 +203,8 @@ class passenger extends Flight_Booking_System
         }
         public void Cancelticket()
         {
+            System.out.println("ticket cancelled");
+            fno=0;
             
         }
         public static int tp;
@@ -242,4 +257,4 @@ class ticket
             }
         }
     }
-} 
+}
